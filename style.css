@@ -1,1 +1,172 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #516dff;
+
+  color: #fff;
+  font-family: 'Press Start 2P', sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  text-align: center;
+}
+
+a {
+  color: #fff;
+}
+
+.hi {
+  line-height: 1.4;
+  color: rgb(255, 255, 255);
+  font-size: xx-large;
+}
+.captu {
+  line-height: 1.4;
+  color: #516dff;
+  font-size: xx-large;
+}
+
+
+.btn {
+  border: 0;
+  background-color: #fff;
+  color: #516dff;
+  padding: 15px 20px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  transition: margin 0.5s ease-out;
+}
+
+#s1{
+  background-image: url(img/lau1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#s2 {
+  background-image: url(img/vecteezy_blue-sunburst-pattern-background_7606632.jpg);
+  background-repeat: no-repeat;
+ background-position: center;
+
+}
+
+.screen.up {
+  margin-top: -100vh;
+}
+
+.paw-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding: 0;
+}
+
+.paw-list li {
+  margin: 10px;
+}
+
+.choose-paw-btn {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  cursor: pointer;
+  font-family: inherit;
+  width: 150px;
+  height: 150px;
+}
+
+.choose-paw-btn:hover {
+  background-color: #fff;
+  color: #516dff;
+}
+
+.choose-paw-btn:active {
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.choose-paw-btn img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.game-container {
+  position: relative;
+}
+
+.time,
+.score {
+  position: absolute;
+  top: 20px;
+}
+
+.time {
+  left: 20px;
+}
+
+.score {
+  right: 20px;
+}
+
+.message {
+  line-height: 1.7;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  padding: 20px;
+  z-index: 100;
+  text-align: center;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: transform 0.4s ease-in;
+}
+
+.message.visible {
+  transform: translate(-50%, 150%);
+  opacity: 1;
+}
+
+.paw {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.paw.caught {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.paw img {
+  width: 100px;
+  height: 100px;
+}

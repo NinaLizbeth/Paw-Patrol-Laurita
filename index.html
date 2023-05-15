@@ -9,18 +9,19 @@
 </head>
 
 <body>
-  <div class="screen">
-    <h1>Catch a Paw Patrol</h1>
+  <audio id="miaudio" src="musica/Paw Patrol Theme Song.mp3"  autoplay loop muted></audio>
+  <div id="s1" class="screen">
+    <h1 class="captu">Captura a un Paw Patrol</h1>
     <button class="btn" id="start-btn">Play Game</button>
   </div>
 
-  <div class="screen">
-    <h1>Hola Laurita... Elige un Paw Patrol para jugar</h1>
+  <div id="s2" class="screen">
+    <h1 class="hi">Hola Laurita... Elige un Paw Patrol para jugar</h1>
     <ul class="paw-list">
       <li>
         <button class="choose-paw-btn">
           <p>Sky</p>
-          <img src="img/sky.png" alt="fly">
+          <img src="img/sky.png" alt="sky">
         </button>
       </li>
       <li>
@@ -32,18 +33,26 @@
       <li>
         <button class="choose-paw-btn">
           <p>Marshal</p>
-          <img src="img/Marshal.png" alt="spider" />
+          <img src="img/Marshal.png" alt="Marshal" />
         </button>
       </li>
       <li>
         <button class="choose-paw-btn">
           <p>Rubble</p>
-          <img src="img/ruble.png" alt="roach" />
+          <img src="img/ruble.png" alt="ruble" />
         </button>
       </li>
     </ul>
   </div>
 
+  <div class="screen game-container" id="game-container">
+    <h3 id="time" class="time">Time: 00:00</h3>
+    <h3 id="score" class="score">Score: 0</h3>
+    <h5 id="message" class="message">
+      Te gusta este juego? <br>
+      Vamos no te rindas...!!!
+    </h5>
+  </div>
 
   <script src="script.js"></script>
 </body>
