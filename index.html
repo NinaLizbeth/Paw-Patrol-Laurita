@@ -9,7 +9,7 @@
 </head>
 
 <body>
-  <audio id="miaudio" src="musica/Paw Patrol Theme Song.mp3"  autoplay loop muted></audio>
+  <audio id="miaudio"  controls><source src="musica/Paw Patrol Theme Song.mp3"></audio>
   <div id="s1" class="screen">
     <h1 class="captu">Captura a un Paw Patrol</h1>
     <button class="btn" id="start-btn">Play Game</button>
@@ -52,8 +52,10 @@
       Te gusta este juego? <br>
       Vamos no te rindas...!!!
     </h5>
+    <div id="gamePaw"></div>
   </div>
-
+  
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="script.js"></script>
 </body>
 
